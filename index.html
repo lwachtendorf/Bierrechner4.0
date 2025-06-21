@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Getränkekasse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Getränkekasse</h1>
+  <div id="total">0,00 €</div>
+
+  <div class="grid-utilities">
+    <div class="tile reset wide" onclick="reset()">Zurücksetzen</div>
+    <div class="tile pfand" onclick="add(-1.0)">
+      Pfand<br>–1,00 €
+      <span class="counter" id="count-pfand">0×</span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="tile wasser" onclick="addWithCount(1.0, 'wasser')">Wasser<br>1,00 €<span class="counter" id="count-wasser">0×</span></div>
+    <div class="tile softdrinks" onclick="addWithCount(1.5, 'softdrinks')">Softdrinks<br>1,50 €<span class="counter" id="count-softdrinks">0×</span></div>
+    <div class="tile bier" onclick="addWithCount(2.0, 'bier')">Bier<br>2,00 €<span class="counter" id="count-bier">0×</span></div>
+    <div class="tile alster" onclick="addWithCount(2.0, 'alster')">Alster<br>2,00 €<span class="counter" id="count-alster">0×</span></div>
+    <div class="tile alkoholfrei" onclick="addWithCount(2.0, 'alkoholfrei')">Alkfreies Bier<br>2,00 €<span class="counter" id="count-alkoholfrei">0×</span></div>
+    <div class="tile havana" onclick="addWithCount(3.0, 'havana')">Havana-Cola<br>3,00 €<span class="counter" id="count-havana">0×</span></div>
+    <div class="tile springer" onclick="addWithCount(2.5, 'springer')">Springer-Cola<br>2,50 €<span class="counter" id="count-springer">0×</span></div>
+    <div class="tile kurze" onclick="addWithCount(1.0, 'kurze')">Kurze<br>1,00 €<span class="counter" id="count-kurze">0×</span></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
